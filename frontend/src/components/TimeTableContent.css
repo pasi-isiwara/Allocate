@@ -1,0 +1,130 @@
+/* Timetable Scroll Container */
+.timetable-content-container {
+  height: 100%;
+  position: relative;
+  overflow: auto;
+  max-height: 70vh;
+}
+
+/* Inner Scrollable Area */
+.timetable-scrollable {
+  height: 100%;
+  overflow: auto;
+  padding: 0 4px;
+}
+
+/* Table Styling */
+.timetable {
+  width: 100%;
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Sticky Headers */
+.time-header,
+.hall-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding: 16px;
+  text-align: center;
+  background: linear-gradient(to bottom, #f8f9fa, #edf2f7);
+  color: #2d3748;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #d1d5db;
+}
+
+.time-header {
+  width: 160px;         /* Increased width */
+  left: 0;
+  z-index: 6;
+}
+
+.hall-header {
+  min-width: 160px;
+}
+
+/* Sticky Time Column */
+.time-cell {
+  position: sticky;
+  left: 0;
+  z-index: 4;
+  width: 160px;         /* Increased width */
+  padding: 0;
+  background: linear-gradient(to right, #f8f9fa, #edf2f7);
+  border-right: 1px solid #e2e8f0;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.03);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Time Text Inside Time Cells */
+.time-text {
+  display: block;
+  padding: 16px 12px;    /* Increased padding */
+  text-align: center;
+  font-size: 16px;       /* Increased font size */
+  color: #4a5568;
+}
+
+/* Module Cells */
+.module-cell {
+  padding: 8px;
+  border: 1px solid #e4ebf3;
+  height: 60px;
+  transition: all 0.2s ease;
+}
+
+.module-cell:hover {
+  box-shadow: inset 0 0 0 2px rgba(66, 153, 225, 0.3);
+}
+
+.module-cell.has-module {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Module Content Wrapper */
+.module-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Module Code Text */
+.module-code {
+  font-weight: 600;
+  font-size: 14px;
+  color: #2d3748;
+}
+
+/* Hour Divider Row */
+.hour-row .time-cell,
+.hour-row td {
+  border-top: 2px solid #25518a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .time-header,
+  .time-cell {
+    width: 120px; /* Adjusted for mobile */
+  }
+
+  .hall-header {
+    min-width: 120px;
+  }
+
+  .module-cell {
+    height: 50px;
+  }
+
+  .time-text,
+  .module-code {
+    font-size: 12px;
+  }
+}

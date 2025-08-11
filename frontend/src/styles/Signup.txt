@@ -1,0 +1,100 @@
+/* Full-screen background */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: url('../assets/login-bg.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Center the signup form */
+.signup-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;  align-items: center;
+}
+
+/* Signup box */
+.signup-form {
+  background-color: rgba(0, 26, 51, 0.9);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: white;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/* Floating label input wrapper */
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+/* Input field */
+.form-group input {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px ;
+  font-size: 14px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: #ddd;
+  outline: none;
+  display: block;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* Label inside input */
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  padding: 0 4px;
+  font-size: 14px;
+  color: #7F8C8D;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+/* Animate label on focus or filled input */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: -9px;
+  left: 8px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* Submit button */
+.signup-form button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  padding: 10px;
+  background-color: #00cc88;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover */
+.signup-form button:hover {
+  background-color: #00b376;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

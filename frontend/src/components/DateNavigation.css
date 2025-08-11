@@ -1,0 +1,61 @@
+.date-navigation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.date-navigation {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #1a252f;
+  color: white;
+}
+
+.nav-button {
+  padding: 8px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.nav-button:hover {
+  background-color: #1b517d;
+}
+
+.nav-button-left {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.nav-button-right {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-left: 1px solid #1a252f;
+}
+
+.date-display {
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Calendar dropdown */
+.calendar-container {
+  position: absolute;
+  top: 100%;
+  margin-top: 8px;
+  z-index: 10;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(30, 41, 59, 0.3); /* Softer shadow */
+  border-radius: 6px;
+}
+
+.calendar {
+  border: none;
+}

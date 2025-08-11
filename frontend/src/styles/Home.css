@@ -1,0 +1,294 @@
+:root {
+  --primary-color: #2f6b3f;     /* Deep forest green - main trees and mid-hills */
+  --secondary-color: #74a273;   /* Soft green - surrounding greenery */
+  --accent-color: #103d39;      /* Warm terracotta - building roofs */
+  --text-light: #f4f1e6;        /* Light cream - for light text on dark */
+  --text-dark: #2e3c2f;         /* Earthy dark green - for text on light */
+  --bg-light: #eaf3eb;          /* Pale greenish-white - background panels */
+  --bg-dark: #385941; 
+  --transition-slow: 0.5s ease;
+  --transition-medium: 0.3s ease;
+  --transition-fast: 0.2s ease;
+}
+body.allocate-home-active {
+  overflow: hidden;
+}
+.allocate-home-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.allocate-home-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.918);
+  background-image: url('../assets/login-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+.allocate-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.301);
+  z-index: -1;
+}
+.allocate-content-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.allocate-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
+  max-width: 700px;
+}
+.allocate-title {
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+.allocate-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+.allocate-subtitle {
+  font-size: 1.4rem;
+  color: var(--text-light);
+  margin-bottom: 0rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+.allocate-description {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  opacity: 0.8;
+  max-width: 600px;
+}
+.allocate-button-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.allocate-primary-button,
+.allocate-secondary-button {
+  position: relative;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: all var(--transition-medium);
+}
+.allocate-primary-button {
+  background-color: #103d39;
+  color: white;
+}
+.allocate-secondary-button {
+   background-color: #00b376;
+  color: white;
+  
+}
+.allocate-button-text {
+  position: relative;
+
+  z-index: 2;
+  transition: transform var(--transition-medium);
+}
+.allocate-button-icon {
+  position: relative;
+  z-index: 2;
+  margin-left: 0.5rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all var(--transition-medium);
+}
+.allocate-primary-button:hover,
+.allocate-secondary-button:hover {
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.3);
+}
+
+.allocate-primary-button:hover .allocate-button-icon,
+.allocate-secondary-button:hover .allocate-button-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+.allocate-primary-button:hover {
+  background-color: #103d39;
+  color: white;
+}
+.allocate-secondary-button:hover {
+   background-color: #00b376;
+  color: white;
+}
+.allocate-notices-panel {
+  width: 350px;
+  margin-top: 50px;
+  margin-left: 280px;
+  margin-right: 10px;
+  display:block;
+  align-items: center;
+}
+.allocate-notices-content {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.allocate-notices-content h3 {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.allocate-notices-content h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+.allocate-notice-items {
+  color: var(--text-light);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+.allocate-animate-element {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+}
+.allocate-title {
+  animation-delay: 0.2s;
+}
+.allocate-subtitle {
+  animation-delay: 0.4s;
+}
+.allocate-description {
+  animation-delay: 0.6s;
+}
+.allocate-button-group {
+  animation-delay: 0.8s;
+}
+.allocate-notices-panel {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInRight 0.8s forwards 1s;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 1100px) {
+  .allocate-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+  .allocate-main-content {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    text-align: center;
+  }
+  .allocate-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .allocate-notices-panel {
+    width: 100%;
+    max-width: 500px;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .allocate-notices-content h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .allocate-notices-content {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .allocate-button-group {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .allocate-title {
+    font-size: 2.5rem;
+  }
+  .allocate-subtitle {
+    font-size: 1.2rem;
+  }
+  .allocate-description {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .allocate-content-wrapper {
+    padding: 1rem;
+  }
+  .allocate-title {
+    font-size: 2rem;
+  }
+}

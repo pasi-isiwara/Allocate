@@ -1,0 +1,174 @@
+/* Full-screen login container */
+.login-login-container {
+  position: relative; /* needed for the pseudo-element */
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow: hidden; /* to clip pseudo-element if needed */
+}
+
+/* The blurred background layer */
+.login-login-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('../assets/login-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px); /* adjust blur amount */
+  z-index: 0;
+}
+
+/* The container’s content should be above the blurred background */
+.login-login-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Login form wrapper */
+.login-login-form {
+  background-color: rgba(160, 254, 196, 0.34);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.61);
+  width: 100%;
+  max-width: 28rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Title */
+.login-form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 1rem;
+
+}
+
+/* Form group with floating label */
+.login-form-group {
+  position: relative;
+}
+
+.login-form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color:rgba(255, 255, 255, 0.311);
+  border: 1px solid rgba(255, 255, 255, 0.311);
+  color: #0e4a64;
+  font-weight: 100;
+  font-size: medium;
+  transition: all 0.3s ease;
+}
+
+.login-form-group input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #00cc88;
+}
+
+.login-form-group input::placeholder {
+  color: transparent;
+}
+
+.login-form-group label {
+  position: absolute;
+  left: 1rem;
+
+  top: 0rem;
+  font-size: 0.875rem;
+  color: #0a2540d4;
+  background-color: #0a254000;
+  padding: 0 rem;
+  transition: all 0.3s ease;
+}
+
+.login-form-group input:placeholder-shown + label {
+  font-size: 1rem;
+  top: 0.6rem;
+}
+
+.login-form-group input:focus + label,
+.login-form-group input:not(:placeholder-shown) + label {
+  top: -1.4rem;
+  left: -0.2rem;
+  font-size: 0.875rem;
+}
+
+/* Forgot Password */
+.login-forgot-password {
+  text-align: right;
+  font-size: 0.875rem;
+  color: #cbd5e0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-forgot-password:hover {
+  color: #00cc88;
+}
+
+/* Login button */
+.login-login-form button {
+  display: block;      /* Make button take full width by default */
+  width: 50%;          /* Keep your 50% width */
+  margin: 0 auto;      /* Horizontally center */
+  padding: 0.75rem 1rem;
+  background: #00b376;
+  box-shadow: 0 4px 6px  #0e4a64f5 ;
+  color: white;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+.login-login-form button:hover {
+  transform: scale(1.02);
+}
+
+.login-login-form button:active {
+  transform: scale(0.98);
+}
+
+.login-login-form button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #00cc88, 0 0 0 4px rgba(0, 204, 136, 0.5);
+}
+
+.login-login-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.login-message {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-message.success {
+  background-color: rgba(0, 204, 136, 0.849); /* translucent teal */
+  color: white;                            /* bright teal */
+  border: 1px solid #00cc88;
+}
+
+.login-message.error {
+  background-color: rgba(255, 0, 0, 0.498); /* translucent soft red */
+  color: white;                            /* medium red */
+  border: 1px solid red;
+}

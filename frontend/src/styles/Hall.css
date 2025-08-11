@@ -1,0 +1,218 @@
+/* Spacing changes */
+.hall-section {
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.75rem;
+  
+}
+
+/* Rest of your original CSS (unchanged) */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(to bottom right, #a2d9f57d, #6fbf7385);
+}
+
+.hall-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .hall-container {
+    padding: 2rem;
+  }
+}
+.hall-container {
+  max-width: 768px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.hall-header {
+  background: linear-gradient(to right, #1f2937, #373c44);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+.hall-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.hall-subtitle {
+  font-size: 1.125rem;
+  opacity: 0.9;
+}
+
+.hall-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.hall-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.hall-info-box {
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.hall-info-box.hall-blue {
+  background-color: #eff6ff;
+}
+.hall-info-box.hall-orange {
+  background-color: #fff7ed;
+}
+.hall-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.hall-info-item:last-child {
+  margin-bottom: 0;
+}
+.hall-icon {
+  margin-right: 0.75rem;
+}
+.hall-icon.hall-blue {
+  color: #1f2937;
+}
+.hall-icon.hall-orange {
+  color: #ea580c;
+}
+.hall-icon.hall-red {
+  color: #dc2626;
+}
+.hall-label {
+  color: #374151;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.hall-booking-section {
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.hall-date-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .hall-date-selector {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.hall-date-label {
+  display: flex;
+  align-items: center;
+}
+.hall-date-input {
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+}
+.hall-date-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+.hall-time-slots {
+  margin-top: 1rem;
+}
+.hall-time-slots-title {
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+.hall-slots-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+}
+.hall-slot-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+.hall-slot-item:last-child {
+  border-bottom: none;
+}
+.hall-time-display {
+  display: flex;
+  align-items: center;
+}
+.hall-booking-button {
+  background-color: #1f2937;
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.hall-booking-button:hover {
+  background-color: #1f2937;
+  transform: translateY(-1px);
+}
+
+.hall-notes-container {
+  margin-top: 0.5rem;
+}
+.hall-notes-list {
+  margin-left: 0.5rem;
+  color: #dc2626;
+}
+
+.hall-footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+.hall-timetable-button {
+  background-color: #1f2937;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.hall-timetable-button:hover {
+  background-color: #111827;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.booking-card {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}

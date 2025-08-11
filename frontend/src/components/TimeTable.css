@@ -1,0 +1,131 @@
+.timetable-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  background-image: url('../assets/login-bg.png');
+  overflow: hidden;
+}
+.timetable-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.timetable-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a365d;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+.home-button {
+  background: linear-gradient(135deg, #03203b, #2c5282);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.home-button:hover {
+  background: linear-gradient(135deg, #2b6cb0, #2a4365);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+.home-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.timetable-wrapper {
+  flex: 1;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+.loading-spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #3182ce;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 16px;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Full-page fixed overlay with blur and translucent white background */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;       /* full viewport width */
+  height: 100vh;      /* full viewport height */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* for Safari */
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 1;
+  visibility: visible;
+
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Fade out state: overlay becomes invisible and unclickable */
+.loading-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Logo styling */
+.loading-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+/* Loading text style */
+.loading-overlay p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #088484;
+  user-select: none;
+}
+
+/* Prevent background scrolling when loading overlay is active */
+.no-scroll-page {
+  overflow: hidden;
+}
