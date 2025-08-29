@@ -289,3 +289,9 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+.loading-logo {
+  width: 120px;         /* or any size you want */
+  height: auto;         /* maintain aspect ratio */
+  object-fit: contain;  /* makes sure image isn’t stretched */
+}

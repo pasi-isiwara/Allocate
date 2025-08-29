@@ -405,3 +405,10 @@
   background-color: #f0f0f0; /* subtle highlight on hover/focus */
   outline: none;
 }
+
+
+.loading-logo {
+  width: 120px;         /* or any size you want */
+  height: auto;         /* maintain aspect ratio */
+  object-fit: contain;  /* makes sure image isn’t stretched */
+}

@@ -1,7 +1,7 @@
 .admin-page .admin-container { 
   position: relative;
   min-height: 100vh;
-  background-image: url('../assets/background-dash.png');
+  background-image: url('../assets/background-dash.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -16,8 +16,8 @@
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  backdrop-filter: blur(8px);
-  background-color: rgba(0, 0, 0, 0.13);
+  backdrop-filter: blur(0px);
+  background-color: rgba(0, 0, 0, 0.411);
   z-index: 0;
 }
 
@@ -74,7 +74,7 @@
 
 .admin-nav-button {
   padding: 0.75rem 1rem;
-  background-color: #088484;
+  background-color: #022727;   /* emerald green */
   color: white;
   border-radius: 10px;
   border: 1px solid transparent;
@@ -82,9 +82,9 @@
   transition: all 0.3s;
 }
 .admin-nav-button:hover {
-  background-color: white;
-  color: #088484;
-  border: 1px solid #088484;
+  background-color: #034242;
+  color: white;
+  border: 1px solid #00C853;
 }
 
 .admin-main {
@@ -111,15 +111,15 @@
   display: flex;
   align-items: center;
   padding: 0.5rem 1.25rem;
-  border: 1px solid red;
-  color: rgba(255, 0, 0, 0.553);
+  border: 1px solid #022727;
+  color: white;
   border-radius: 0.375rem;
-  background-color: transparent;
+  background-color: #022727;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.3s;
 }
 .admin-special-notes-button:hover {
-  background-color: rgba(255, 0, 0, 0.564);
+  background-color: #034c4c;
   color: white;
 }
 .admin-special-notes-button span {
@@ -187,7 +187,7 @@
 .admin-toggle-button.selected {
   background-color: #022727;
   color: white;
-  border: 1px solid #088484;
+  border: 2px solid #00C853;
 }
 
 .admin-toggle-button.unselected {
@@ -205,7 +205,7 @@
   align-items: center;
   width: 90%;
   padding: 0.75rem 1.25rem;
-  background-color: #088484;
+  background-color: #022727;
   color: white;
   border-radius: 15px;
   border: 1px solid transparent;
@@ -213,14 +213,14 @@
   transition: all 0.3s ease;
 }
 .admin-edit-button:hover {
-  background-color: white;
-  color: #088484;
-  border: 1px solid #088484;
+  background-color: #034242;
+  color: white;
+  border: 1px solid #022727;
 }
 .admin-edit-button.active {
-  background-color: white;
-  color: #088484;
-  border: 1px solid #088484;
+  background-color: #035454;
+  color: white;
+  border: 1px solid #006b6b;
   box-shadow: 0 2px 8px rgba(6, 106, 106, 0.3);
 }
 
@@ -273,7 +273,7 @@
   align-items: center;
   gap: 0.5rem;
   border: none;
-  background-color: rgba(255, 0, 0, 0.81);
+  background-color: #ff1212; /* coral red */
   color: white;
   border-radius: 8px;
   cursor: pointer;
@@ -282,12 +282,11 @@
   justify-content: center;
 }
 .admin-book-button:hover {
-  background-color: rgb(163, 0, 46);
+  background-color: #D50000;
 }
 .admin-book-button.active {
-  background-color: rgb(163, 0, 46);
+  background-color: #D50000;
 }
-
 
 .admin-note-button {
   margin-top: 2rem;
@@ -296,7 +295,7 @@
   align-items: center;
   gap: 0.5rem;
   border: none;
-  background-color: #1f2937;
+  background-color: #022727; /* dark gray */
   color: white;
   border-radius: 8px;
   cursor: pointer;
@@ -305,10 +304,10 @@
   justify-content: center;
 }
 .admin-note-button:hover {
-  background-color:#3e506b;
+  background-color:#455A64;
 }
 .admin-note-button.active {
-  background-color: #10151d;
+  background-color: #022727;
 }
 
 .title-class {
@@ -317,4 +316,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #1f2937;
   margin-bottom: 1rem;
+}
+
+.loading-logo {
+  width: 120px;         /* or any size you want */
+  height: auto;         /* maintain aspect ratio */
+  object-fit: contain;  /* makes sure image isn’t stretched */
 }
